@@ -11,6 +11,7 @@ If you have openvpn files from [HackTheBox](https://app.hackthebox.com) or [TryH
 - HTB Starting Point: `starting`
 - HTB Labs: `lab`
 - THM: `thm`
+
 Ex. `linux_setup/resources/thm_jada.openvpn`
 
 # Sections
