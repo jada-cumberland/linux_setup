@@ -1,5 +1,5 @@
 # What is this?
-This bash script is designed to automate setup for my personal Linux VM instances. I intend to add to it as time passes and I customize my VMs more.
+This bash script is designed to automate setup for my personal Linux VM instances. I intend to add to and improve it as time passes and I customize my VMs more.
 
 # To use: 
 1. Download: `git clone https://github.com/jada-cumberland/linux_setup.git`
