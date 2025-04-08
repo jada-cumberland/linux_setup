@@ -9,7 +9,7 @@ fi
 # Run pimpmykali if OS is Kali Linux
 if uname -a | grep -q "kali"; then
     git clone https://github.com/Dewalt-arch/pimpmykali.git
-    chmod +x ./pimpmykali/pimpmykali.sh && ./pimpmykali/pimpmykali.sh --all --upgrade
+    chmod +x ./pimpmykali/pimpmykali.sh && ./pimpmykali/pimpmykali.sh
 fi
 
 # Get username of user
@@ -39,20 +39,19 @@ if [[ $(ls -d */ | grep -w -c "resources/") -ne 0 ]]; then
     ovpnfiles=$(ls resources/*.ovpn)
     
     if grep -q ".ovpn" $zshrc; then
-        echo "Some openvpn configs already exist."
+        echo "Some openvpn configs already exist. Remove all prior ovpn aliases to add from resources dir."
     else
         echo "Openvpn files found."
         for file in $ovpnfiles; do
-            count=$(echo $file | grep -o "_" | wc -l)
-            if [[ $count == 2 ]]; then
+            if echo $file | grep -q "starting"; then
                 echo "alias spovpn='openvpn $userdir/$file'" >> $zshrc
-            elif [[ $count == 1 ]]; then
+            elif echo $file | grep -q "lab"; then
                 echo "alias labovpn='openvpn $userdir/$file'" >> $zshrc
-            elif [[ $count == 0 ]]; then
+            elif echo $file | grep -q "thm"; then
                 echo "alias thmovpn='openvpn $userdir/$file'" >> $zshrc
             fi
         done
-        echo "File aliases have been added for HTB Starting Point, HTB Labs, and TryHackMe."
+        echo "File aliases have been added for HTB Starting Point, HTB Labs, and TryHackMe, as available in resources dir."
     fi
     
     if [[ $(pwd) != "$userdir" ]]; then
