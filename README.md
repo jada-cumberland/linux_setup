@@ -11,7 +11,7 @@ If you have openvpn files from [HackTheBox](https://app.hackthebox.com) or [TryH
 - HTB Starting Point: `starting`
 - HTB Labs: `lab`
 - THM: `thm`
-Ex. `pimpmykali/resources/thm_jada.openvpn`
+Ex. `linux_setup/resources/thm_jada.openvpn`
 
 # Sections
 - Pimpmykali (if running Kali Linux): Add Kali fixes and install useful scripts
