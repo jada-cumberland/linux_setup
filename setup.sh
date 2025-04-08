@@ -9,7 +9,7 @@ fi
 # Run pimpmykali if OS is Kali Linux
 if uname -a | grep -q "kali"; then
     git clone https://github.com/Dewalt-arch/pimpmykali.git
-    chmod +x ./pimpmykali/pimpmykali.sh && ./pimpmykali/pimpmykali.sh
+    chmod +x ./pimpmykali/pimpmykali.sh && ./pimpmykali/pimpmykali.sh --all --upgrade
 fi
 
 # Get username of user
