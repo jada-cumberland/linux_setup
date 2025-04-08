@@ -7,7 +7,11 @@ This bash script is designed to automate setup for my personal Linux VM instance
 3. Add execute permissions to *setup.sh*: `chmod +x setup.sh`
 4. Run the file: `sudo ./setup.sh`
 
-If you have openvpn files from [HackTheBox](https://app.hackthebox.com) or [TryHackMe](https://tryhackme.com), create a `resources` directory inside `linux_setup` and add the .ovpn files to it.
+If you have openvpn files from [HackTheBox](https://app.hackthebox.com) or [TryHackMe](https://tryhackme.com), create a `resources` directory inside `linux_setup` and add the .ovpn files to it. Ensure the filenames contain the corresponding strings:
+- HTB Starting Point: `starting`
+- HTB Labs: `lab`
+- THM: `thm`
+Ex. `pimpmykali/resources/thm_jada.openvpn`
 
 # Sections
 - Pimpmykali (if running Kali Linux): Add Kali fixes and install useful scripts
